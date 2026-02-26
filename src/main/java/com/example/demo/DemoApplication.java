@@ -40,7 +40,7 @@ public class DemoApplication {
 		}
 
 		@GetMapping("hello/{name}")
-		public String Hello(@PathVariable("name") String name, @RequestParam(value = "caps", defaultValue = "false") boolean caps){
+		public String Hello(@PathVariable() String name, @RequestParam(value = "caps", defaultValue = "false") boolean caps){
 			numberOfUsage++;
 			String message = "hello " + name;
 			if(caps){
